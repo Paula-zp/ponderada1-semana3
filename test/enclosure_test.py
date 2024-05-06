@@ -19,7 +19,7 @@ def test_enclosure_condition():
 def test_enclosure_change_condition():
     zoo = Zoo()
     enclosure = Enclosure(zoo)
-    enclosure.change_condition("poorly_cared")
+    enclosure.change_condition()
     assert enclosure.condition == "poorly_cared", "A condição do recinto não foi alterada corretamente."
 
 # Teste para verificar se o método add_animal existe e funciona corretamente

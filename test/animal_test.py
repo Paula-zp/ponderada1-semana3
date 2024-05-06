@@ -10,6 +10,7 @@ def test_animal_exists():
     assert mouse.name == "Tata", "O animal não foi criado corretamente."
 
 def test_feed_animal():
-    mouse = Animal("Tata", "Mouse", 0)
-    mouse.feed(1)
-    assert mouse.happiness == 2, "A alimentação não foi feita corretamente."
+    zoo = Zoo()
+    mouse = Animal("Tata", "Mouse", zoo)
+    mouse.feed(2)
+    assert mouse.happiness == 10, "A alimentação não foi feita corretamente."
