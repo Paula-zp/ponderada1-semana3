@@ -38,3 +38,16 @@ def test_visit_zoo():
     player = Player()
     visitor.visit_zoo(zoo, player)
     assert player.money == 10, "O dinheiro do jogador não foi alterado corretamente."
+
+# Teste para verificar se as visitas são contadas corretamente
+def test_visit_count():
+    zoo = Zoo()
+
+    # Testa o método increment_visit_count
+    for i in range(5):
+        zoo.increment_visit_count()
+    assert zoo.visit_count == 5, "O contador de visitas não foi incrementado corretamente."
+
+    # Testa o método reset_visit_count
+    zoo.reset_visit_count()
+    assert zoo.visit_count == 0, "O contador de visitas não foi zerado corretamente."

@@ -23,3 +23,4 @@ class Visitor:
     def visit_zoo(self, zoo, player):
         if self.decide_to_visit(zoo):
             player.earn_money(10)
+            zoo.increment_visit_count()
