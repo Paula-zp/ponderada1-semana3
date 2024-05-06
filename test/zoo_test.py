@@ -1,7 +1,14 @@
 import pytest
 
+from src.zoo import Zoo
+from src.animal import Animal
+from src.enclosure import Enclosure
+from src.visitor import Visitor
+from src.player import Player
+
 def test_animal_exists():
-    mouse = Animal("Tata", "Mouse", 10, zoo)
+    zoo = Zoo()
+    mouse = Animal("Tata", "Mouse", zoo)
     assert mouse.name == "Tata", "O animal não foi criado corretamente."
 
 def test_enclosure_exists():
